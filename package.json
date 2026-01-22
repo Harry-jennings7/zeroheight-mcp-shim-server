@@ -1,0 +1,25 @@
+{
+  "name": "mcp-zeroheight-shim",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Streamable MCP shim exposing Zeroheight REST API to Microsoft Copilot Studio",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "axios": "^1.6.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.9",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,13 @@
+name: zeroheight-mcp
+services:
+  api:
+    project: .
+    language: node
+    host: containerapp
+    docker:
+      file: ./Dockerfile
+    env:
+      - name: ZEROHEIGHT_CLIENT_ID
+        value: ""
+      - name: ZEROHEIGHT_TOKEN
+        value: ""

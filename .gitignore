@@ -1,0 +1,90 @@
+
+# -----------------------------------------------------------
+# Node / TypeScript
+# -----------------------------------------------------------
+node_modules/
+dist/
+build/
+.temp/
+.tmp/
+
+# TypeScript build output
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Local environment files (DO NOT COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+
+# -----------------------------------------------------------
+# OS / Editor files
+# -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+.history/
+
+# -----------------------------------------------------------
+# GitHub / CI
+# -----------------------------------------------------------
+# Ignore local action artifacts
+.github/workflows/*.local.yml
+
+# -----------------------------------------------------------
+# Docker / Containers
+# -----------------------------------------------------------
+# Ignore local corp certs
+*.pem
+*.crt
+*.cer
+
+# Docker build output
+docker-image.tar
+docker-compose.override.yml
+
+# -----------------------------------------------------------
+# MCP / Project Specific
+# -----------------------------------------------------------
+# Payloads or temporary test bodies
+payload.json
+payload-*.json
+*.http
+
+# Any debug output
+debug/
+*.bak
+*.tmp
+
+# Coverage reports (if tests added later)
+coverage/
+cover/
+
+# -----------------------------------------------------------
+# Sensitive or accidental files
+# -----------------------------------------------------------
+# Never commit private keys
+*.key
+*.p12
+
+# Compiled JS from scratch environments
+*.js.map
+
+# -----------------------------------------------------------
+# Misc
+# -----------------------------------------------------------
+# Ignore lockfiles except npm (your repo uses npm)
+pnpm-lock.yaml
+yarn.lock
+``

@@ -1,0 +1,93 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@modelcontextprotocol/sdk": {
+      "name": "@modelcontextprotocol/sdk",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        {
+          "source": 1111906,
+          "name": "@modelcontextprotocol/sdk",
+          "dependency": "@modelcontextprotocol/sdk",
+          "title": "Anthropic's MCP TypeScript SDK has a ReDoS vulnerability",
+          "url": "https://github.com/advisories/GHSA-8r9q-7v3j-jr4g",
+          "severity": "high",
+          "cwe": ["CWE-1333"],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<1.25.2"
+        }
+      ],
+      "effects": [],
+      "range": "<1.25.2",
+      "nodes": ["node_modules/@modelcontextprotocol/sdk"],
+      "fixAvailable": true
+    },
+    "diff": {
+      "name": "diff",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112148,
+          "name": "diff",
+          "dependency": "diff",
+          "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
+          "url": "https://github.com/advisories/GHSA-73rr-hh4g-fpgx",
+          "severity": "low",
+          "cwe": ["CWE-400", "CWE-1333"],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<8.0.3"
+        }
+      ],
+      "effects": ["ts-node"],
+      "range": "<8.0.3",
+      "nodes": ["node_modules/diff"],
+      "fixAvailable": false
+    },
+    "ts-node": {
+      "name": "ts-node",
+      "severity": "low",
+      "isDirect": false,
+      "via": ["diff"],
+      "effects": ["ts-node-dev"],
+      "range": "<=1.4.3 || >=1.7.2",
+      "nodes": ["node_modules/ts-node"],
+      "fixAvailable": false
+    },
+    "ts-node-dev": {
+      "name": "ts-node-dev",
+      "severity": "low",
+      "isDirect": true,
+      "via": ["ts-node"],
+      "effects": [],
+      "range": "*",
+      "nodes": ["node_modules/ts-node-dev"],
+      "fixAvailable": false
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 0,
+      "high": 1,
+      "critical": 0,
+      "total": 4
+    },
+    "dependencies": {
+      "prod": 128,
+      "dev": 101,
+      "optional": 27,
+      "peer": 5,
+      "peerOptional": 0,
+      "total": 231
+    }
+  }
+}
